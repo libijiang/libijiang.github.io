@@ -165,18 +165,20 @@
       </div>
       <div class="markdown-body">
         <p>使用静态blog主要就是想专心写内容，不想折腾系统。结果还是发现好几个问题。专门记录下，防止后面换电脑重新搭建环境，又得折腾。</p>
-<h2 id="1、数学公式显示问题"><a href="#1、数学公式显示问题" class="headerlink" title="1、数学公式显示问题"></a>1、数学公式显示问题</h2><p>第一个遇到的问题就是数学公式显示问题，解决方案是卸载hexo-math和hexo-renderer-marked，该用pandoc渲染。</p>
+<h2 id="数学公式显示问题">1、数学公式显示问题</h2>
+<p>第一个遇到的问题就是数学公式显示问题，解决方案是卸载hexo-math和hexo-renderer-marked，该用pandoc渲染。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-math --save  </span><br><span class="line">npm uninstall hexo-renderer-marked --save</span><br><span class="line"></span><br><span class="line">npm install hexo-renderer-pandoc --save  </span><br><span class="line">npm install hexo-filter-mathjax --save</span><br></pre></td></tr></table></figure>
 <p>在配置文件_config.yml，中增加如下内容</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">pandoc:</span></span><br><span class="line">  <span class="attr">args:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">--mathjax</span></span><br></pre></td></tr></table></figure>
 <p>参考文章：</p>
-<p><a target="_blank" rel="noopener" href="https://blog.barku.re/2024/04/20/彻底解决-Hexo-的数学公式渲染问题/">https://blog.barku.re/2024/04/20/彻底解决-Hexo-的数学公式渲染问题/</a></p>
-<h2 id="2、图片相对路径问题"><a href="#2、图片相对路径问题" class="headerlink" title="2、图片相对路径问题"></a>2、图片相对路径问题</h2><p>卸载hexo-renderer-marked后，文章内采用相对路径引用的图片也挂了。解决办法是卸载hexo-asset-image安装hexo-image-link</p>
+<p>https://blog.barku.re/2024/04/20/彻底解决-Hexo-的数学公式渲染问题/</p>
+<h2 id="图片相对路径问题">2、图片相对路径问题</h2>
+<p>卸载hexo-renderer-marked后，文章内采用相对路径引用的图片也挂了。解决办法是卸载hexo-asset-image安装hexo-image-link</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-asset-image --save</span><br><span class="line">npm install hexo-image-link --save</span><br></pre></td></tr></table></figure>
 <p>在配置文件_config.yml，启用post_asset_folder</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 <p>参考文章：</p>
-<p><a target="_blank" rel="noopener" href="https://www.csie.ntu.edu.tw/~r08922a25/blog/2022/11/21/用HEXO架設BLOG-圖片插入-Latex數學公式排版，詳細教學/">https://www.csie.ntu.edu.tw/~r08922a25/blog/2022/11/21/用HEXO架設BLOG-圖片插入-Latex數學公式排版，詳細教學/</a></p>
+<p>https://www.csie.ntu.edu.tw/~r08922a25/blog/2022/11/21/用HEXO架設BLOG-圖片插入-Latex數學公式排版，詳細教學/</p>
 
       </div>
       
@@ -210,7 +212,7 @@
     <div class="title">Contents</div>
     <div class="catalog-content">
       
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98"><span class="toc-text">1、数学公式显示问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E5%9B%BE%E7%89%87%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98"><span class="toc-text">2、图片相对路径问题</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98"><span class="toc-text">1、数学公式显示问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E7%89%87%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98"><span class="toc-text">2、图片相对路径问题</span></a></li></ol>
       
     </div>
   </div>
