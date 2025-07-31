@@ -1222,103 +1222,166 @@ header .menu label {
     display: none;
   }
 }
-body:not(.dark-theme) .highlight {
-  color: #68615e;
-  background: #f1efee;
+body:not(.dark-theme) .post-content figure.highlight {
+  margin: 2em 0;
+  background: #f7f7f7;
+  color: #4d4d4c;
+  font-size: 12px;
+  overflow: scroll;
+  overflow-y: hidden;
+  overflow-x: auto;
 }
-body:not(.dark-theme) .highlight .code .comment,
-body:not(.dark-theme) .highlight .code .quote {
-  color: #766e6b;
+body:not(.dark-theme) .post-content figure.highlight .gutter {
+  color: $hight-gutter;
 }
-body:not(.dark-theme) .highlight .code .variable,
-body:not(.dark-theme) .highlight .code .template-variable,
-body:not(.dark-theme) .highlight .code .attribute,
-body:not(.dark-theme) .highlight .code .tag,
-body:not(.dark-theme) .highlight .code .name,
-body:not(.dark-theme) .highlight .code .regexp,
-body:not(.dark-theme) .highlight .code .link,
-body:not(.dark-theme) .highlight .code .selector-id,
-body:not(.dark-theme) .highlight .code .selector-class {
-  color: #f22c40;
+body:not(.dark-theme) .post-content figure.highlight pre {
+  background: #f7f7f7;
+  margin: 0;
 }
-body:not(.dark-theme) .highlight .code .number,
-body:not(.dark-theme) .highlight .code .meta,
-body:not(.dark-theme) .highlight .code .built_in,
-body:not(.dark-theme) .highlight .code .builtin-name,
-body:not(.dark-theme) .highlight .code .literal,
-body:not(.dark-theme) .highlight .code .type,
-body:not(.dark-theme) .highlight .code .params {
-  color: #df5320;
+body:not(.dark-theme) .post-content code {
+  padding: 2px 4px;
+  background: #f7f7f7;
+  font-family: Menlo, Monaco, Consolas, Courier New, monospace;
+  font-size: 12px;
 }
-body:not(.dark-theme) .highlight .code .string,
-body:not(.dark-theme) .highlight .code .symbol,
-body:not(.dark-theme) .highlight .code .bullet {
-  color: #7b9726;
+body:not(.dark-theme) .post-content pre {
+  padding: 10px;
+  overflow: auto;
+  background: #f7f7f7;
+  font-family: Menlo, Monaco, Consolas, Courier New, monospace;
 }
-body:not(.dark-theme) .highlight .code .title,
-body:not(.dark-theme) .highlight .code .section {
-  color: #407ee7;
+body:not(.dark-theme) .post-content pre code {
+  padding: 0;
 }
-body:not(.dark-theme) .highlight .code .keyword,
-body:not(.dark-theme) .highlight .code .selector-tag {
-  color: #6666ea;
+body:not(.dark-theme) .post-content pre .deletion {
+  background: #fdd;
 }
-body:not(.dark-theme) .highlight .code .emphasis {
-  font-style: italic;
+body:not(.dark-theme) .post-content pre .addition {
+  background: #dfd;
 }
-body:not(.dark-theme) .highlight .code .strong {
-  font-weight: bold;
+body:not(.dark-theme) .post-content pre .meta {
+  color: #8959a8;
+}
+body:not(.dark-theme) .post-content pre .comment {
+  color: #8e908c;
+}
+body:not(.dark-theme) .post-content pre .variable,
+body:not(.dark-theme) .post-content pre .attribute,
+body:not(.dark-theme) .post-content pre .tag,
+body:not(.dark-theme) .post-content pre .regexp,
+body:not(.dark-theme) .post-content pre .ruby .constant,
+body:not(.dark-theme) .post-content pre .xml .tag .title,
+body:not(.dark-theme) .post-content pre .xml .pi,
+body:not(.dark-theme) .post-content pre .xml .doctype,
+body:not(.dark-theme) .post-content pre .html .doctype,
+body:not(.dark-theme) .post-content pre .css .id,
+body:not(.dark-theme) .post-content pre .css .class,
+body:not(.dark-theme) .post-content pre .css .pseudo {
+  color: #c82829;
+}
+body:not(.dark-theme) .post-content pre .number,
+body:not(.dark-theme) .post-content pre .preprocessor,
+body:not(.dark-theme) .post-content pre .built_in,
+body:not(.dark-theme) .post-content pre .literal,
+body:not(.dark-theme) .post-content pre .params,
+body:not(.dark-theme) .post-content pre .constant,
+body:not(.dark-theme) .post-content pre .command {
+  color: #f5871f;
+}
+body:not(.dark-theme) .post-content pre .ruby .class .title,
+body:not(.dark-theme) .post-content pre .css .rules .attribute,
+body:not(.dark-theme) .post-content pre .string,
+body:not(.dark-theme) .post-content pre .value,
+body:not(.dark-theme) .post-content pre .inheritance,
+body:not(.dark-theme) .post-content pre .header,
+body:not(.dark-theme) .post-content pre .ruby .symbol,
+body:not(.dark-theme) .post-content pre .xml .cdata,
+body:not(.dark-theme) .post-content pre .special,
+body:not(.dark-theme) .post-content pre .number,
+body:not(.dark-theme) .post-content pre .formula {
+  color: #718c00;
+}
+body:not(.dark-theme) .post-content pre .title,
+body:not(.dark-theme) .post-content pre .css .hexcolor {
+  color: #3e999f;
+}
+body:not(.dark-theme) .post-content pre .function,
+body:not(.dark-theme) .post-content pre .python .decorator,
+body:not(.dark-theme) .post-content pre .python .title,
+body:not(.dark-theme) .post-content pre .ruby .function .title,
+body:not(.dark-theme) .post-content pre .ruby .title .keyword,
+body:not(.dark-theme) .post-content pre .perl .sub,
+body:not(.dark-theme) .post-content pre .javascript .title,
+body:not(.dark-theme) .post-content pre .coffeescript .title {
+  color: #4271ae;
+}
+body:not(.dark-theme) .post-content pre .keyword,
+body:not(.dark-theme) .post-content pre .javascript .function {
+  color: #8959a8;
 }
 body.dark-theme .highlight {
-  background: #2b2b2b;
-  color: #bababa;
-}
-body.dark-theme .highlight .code .strong,
-body.dark-theme .highlight .code .emphasis {
-  color: #a8a8a2;
-}
-body.dark-theme .highlight .code .bullet,
-body.dark-theme .highlight .code .quote,
-body.dark-theme .highlight .code .link,
-body.dark-theme .highlight .code .number,
-body.dark-theme .highlight .code .regexp,
-body.dark-theme .highlight .code .literal {
-  color: #6896ba;
-}
-body.dark-theme .highlight .code .code,
-body.dark-theme .highlight .code .selector-class {
-  color: #a6e22e;
-}
-body.dark-theme .highlight .code .emphasis {
-  font-style: italic;
+  background: #282b2e;
+  color: #e0e2e4;
 }
 body.dark-theme .highlight .code .keyword,
 body.dark-theme .highlight .code .selector-tag,
-body.dark-theme .highlight .code .section,
-body.dark-theme .highlight .code .attribute,
+body.dark-theme .highlight .code .literal,
+body.dark-theme .highlight .code .selector-id {
+  color: #93c763;
+}
+body.dark-theme .highlight .code .number {
+  color: #ffcd22;
+}
+body.dark-theme .highlight .code .attribute {
+  color: #668bb0;
+}
+body.dark-theme .highlight .code .code,
+body.dark-theme .highlight .code .class .title,
+body.dark-theme .highlight .code .section {
+  color: #fff;
+}
+body.dark-theme .highlight .code .regexp,
+body.dark-theme .highlight .code .link {
+  color: #d39745;
+}
+body.dark-theme .highlight .code .meta {
+  color: #557182;
+}
+body.dark-theme .highlight .code .tag,
 body.dark-theme .highlight .code .name,
-body.dark-theme .highlight .code .variable {
-  color: #cb7832;
-}
-body.dark-theme .highlight .code .params {
-  color: #b9b9b9;
-}
-body.dark-theme .highlight .code .string,
+body.dark-theme .highlight .code .bullet,
 body.dark-theme .highlight .code .subst,
+body.dark-theme .highlight .code .emphasis,
 body.dark-theme .highlight .code .type,
 body.dark-theme .highlight .code .built_in,
-body.dark-theme .highlight .code .builtin-name,
-body.dark-theme .highlight .code .symbol,
-body.dark-theme .highlight .code .selector-id,
 body.dark-theme .highlight .code .selector-attr,
 body.dark-theme .highlight .code .selector-pseudo,
+body.dark-theme .highlight .code .addition,
+body.dark-theme .highlight .code .variable,
 body.dark-theme .highlight .code .template-tag,
-body.dark-theme .highlight .code .template-variable,
-body.dark-theme .highlight .code .addition {
-  color: #e0c46c;
+body.dark-theme .highlight .code .template-variable {
+  color: #8cbbad;
+}
+body.dark-theme .highlight .code .string,
+body.dark-theme .highlight .code .symbol {
+  color: #ec7600;
 }
 body.dark-theme .highlight .code .comment,
-body.dark-theme .highlight .code .deletion,
-body.dark-theme .highlight .code .meta {
-  color: #7f7f7f;
+body.dark-theme .highlight .code .quote,
+body.dark-theme .highlight .code .deletion {
+  color: #818e96;
+}
+body.dark-theme .highlight .code .selector-class {
+  color: #a082bd;
+}
+body.dark-theme .highlight .code .keyword,
+body.dark-theme .highlight .code .selector-tag,
+body.dark-theme .highlight .code .literal,
+body.dark-theme .highlight .code .doctag,
+body.dark-theme .highlight .code .title,
+body.dark-theme .highlight .code .section,
+body.dark-theme .highlight .code .type,
+body.dark-theme .highlight .code .name,
+body.dark-theme .highlight .code .strong {
+  font-weight: bold;
 }
